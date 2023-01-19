@@ -4,6 +4,7 @@ import classNames from "classnames";
 import { styled } from "@mui/material/styles";
 import Badge from "@mui/material/Badge";
 import Avatar from "@mui/material/Avatar";
+import Image from 'next/image';
 
 const SmallAvatar = styled(Avatar)(({ theme }) => ({
   width: 28,
