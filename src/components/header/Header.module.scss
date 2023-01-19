@@ -2,13 +2,14 @@
 
 .wrapper {
   padding: 0px;
-  // background-color: colors.$background_default;
+  background-color: colors.$background_default;
 }
 
 .container {
   display: flex !important;
   align-items: center;
   justify-content: center;
+  background-color: colors.$background_default;
 }
 
 .paper {
@@ -18,6 +19,7 @@
   position: relative;
   top: 180px;
   text-align: center;
+  background-color: colors.$background_default;
 }
 
 // .default {
