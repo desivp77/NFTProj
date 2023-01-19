@@ -25,10 +25,10 @@ import Avatar from "./Avatar";
 // The component must use rem as sizing units for the texts
  
  
-export default function User({...name}) {
+export default function User(...name) {
  
   return (
-    <div className="user" {{...name}}>
+    <div className="user" {...name}>
          <Avatar/>
          <div className="name">Jogn</div>
          <div className="info">bla bla</div>

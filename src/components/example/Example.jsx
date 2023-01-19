@@ -4,7 +4,7 @@ import Link from "../link/Link";
 import styles from "./Example.module.scss";
 import classNames from "classnames";
  
-import Header from "../Header.jsx";
+import Header from "../header/Header.jsx";
 import Avatar1 from "../avatar/Avatar.jsx";
 // import User from "../user/User.jsx";
 
