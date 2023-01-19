@@ -1,12 +1,12 @@
-// import * as React from "react";
-// import Paper from "@mui/material/Paper";
-// import Link from "../link/Link";
-// import styles from "./User.module.scss";
-// import classNames from "classnames"; 
-// import { styled } from "@mui/material/styles";
-// import Badge from "@mui/material/Badge";
-// import Avatar from "@mui/material/Avatar";
-// import Avatar from "./Avatar";
+import * as React from "react";
+import Paper from "@mui/material/Paper";
+import Link from "../link/Link";
+import styles from "./User.module.scss";
+import classNames from "classnames"; 
+import { styled } from "@mui/material/styles";
+import Badge from "@mui/material/Badge";
+import Avatar from "@mui/material/Avatar";
+import Avatar from "./Avatar";
  
 
 // The component must have a prop named name with a default value of an empty string
@@ -25,15 +25,15 @@
 // The component must use rem as sizing units for the texts
  
  
-// export default function User({name, info, avatar, size, verified}) {
+export default function User({...name}) {
  
-//   return (
-//     <div className="user" {{...name}{...info}{...avatar}{...size}{...verified}}>
-//          <Avatar/>
-//          <div className="name">Jogn</div>
-//          <div className="info">bla bla</div>
-//     </div>
-//   );
+  return (
+    <div className="user" {{...name}}>
+         <Avatar/>
+         <div className="name">Jogn</div>
+         <div className="info">bla bla</div>
+    </div>
+  );
 
    
-// }
+}
