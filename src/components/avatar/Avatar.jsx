@@ -6,8 +6,8 @@ import { styled } from "@mui/material/styles";
 
 // url,
 
-export default function Avatar({ size = 90, sizeIcon = 28, verified = false }) {
-  const url = "./images/avatar.png";
+export default function Avatar({ url, size = 90, sizeIcon = 28, verified = false }) {
+  // const url = "./images/avatar.png";
 
   return (
 
