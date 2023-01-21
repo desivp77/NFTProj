@@ -5,6 +5,8 @@ import classNames from "classnames";
 
 // ++ The component must have a prop named name with a default value of an empty string
 // ++ The component must have a prop named info with a default value of an empty string
+
+
 // ++ The component must have a prop named avatar with a default value of an empty string
 //  +++        The component must have a prop named size with a default value of 55
 //  +++        The component must have a prop named verified with a default value of false
@@ -22,7 +24,7 @@ import classNames from "classnames";
 export default function User({ name = "", info = "", avatar = "", size = 55, verified = false }) {
 
   return (
-      <div className="user" width={size} height={size}>
+      <div className={classNames(styles.user)} width={size} height={size}>
          <div className="user_av">
          <Avatar url={avatar} size={size} verified={verified}/>
          </div>
