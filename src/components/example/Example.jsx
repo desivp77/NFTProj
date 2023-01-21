@@ -5,7 +5,7 @@ import styles from "./Example.module.scss";
 import classNames from "classnames";
  
 import Header from "../header/Header.jsx";
-import Avatar from "../avatar/Avatar.jsx";
+import User from "../user/User.jsx";
 // import User from "../user/User.jsx";
 
 export default function Copyright() {
@@ -20,14 +20,8 @@ export default function Copyright() {
         </Paper>
       </Container>
 
-      <Avatar/>
-          {/* <User 
-            name=""
-            info=""
-            avatar=""
-            size="55"
-            verified="false"
-         /> */}
+      <User/>
+ 
     </div>
   );
 }
