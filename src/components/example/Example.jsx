@@ -6,6 +6,7 @@ import classNames from "classnames";
  
 import Header from "../header/Header.jsx";
 import User from "../user/User.jsx";
+import NFTCard from "../card/Card.jsx";
 // import User from "../user/User.jsx";
 
 export default function Copyright() {
@@ -21,7 +22,7 @@ export default function Copyright() {
       </Container>
 
       <User/>
- 
+      <NFTCard/>
     </div>
   );
 }
