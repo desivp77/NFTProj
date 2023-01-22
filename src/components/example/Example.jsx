@@ -21,7 +21,6 @@ export default function Copyright() {
         </Paper>
       </Container>
 
-      <User/>
       <NFTCard/>
     </div>
   );
