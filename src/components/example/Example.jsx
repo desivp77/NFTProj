@@ -3,10 +3,10 @@ import Container from "@mui/material/Container";
 import Link from "../link/Link";
 import styles from "./Example.module.scss";
 import classNames from "classnames";
- 
+import Card from "../card/Card.jsx";
 import Header from "../header/Header.jsx";
-import User from "../user/User.jsx";
-import NFTCard from "../card/Card.jsx";
+
+import Trending from "../Trending/Trending.jsx";
 // import User from "../user/User.jsx";
 
 export default function Copyright() {
@@ -20,8 +20,8 @@ export default function Copyright() {
           </Link>
         </Paper>
       </Container>
-
-      <NFTCard/>
+ 
+<Trending />
     </div>
   );
 }

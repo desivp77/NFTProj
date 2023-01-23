@@ -1,0 +1,26 @@
+@use "../../styles/colors";
+
+.wrapper {
+  padding: 0px;
+  background-color: colors.$background_default;
+}
+
+.container {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 20px;
+  color: colors.$text_primary;
+}
+
+.trending_wrapper {
+  padding: 100px;
+  background-color: colors.$primary_main;
+}
