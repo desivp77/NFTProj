@@ -18,11 +18,8 @@ import CircleIcon from "@mui/icons-material/Circle";
 
 const renderer = ({ hours, minutes, seconds, completed }) => {
   if (completed) {
-      // Render a completed state
       return <span>0:0:0</span>;
   } else {
-      // Render a countdown
-      //return `${hours}:${minutes}:${seconds}`;
       return (
           <span>
               {hours}:{minutes}:{seconds}
