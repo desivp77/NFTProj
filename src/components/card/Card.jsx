@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Countdown from "react-countdown";
 import millify from "millify";
 import Countdown from './Countdown';
 import Avatar from "../avatar/Avatar.jsx";
