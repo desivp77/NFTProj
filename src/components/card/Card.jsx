@@ -85,7 +85,7 @@ export default function Card({
                             margin: "0 5px 0 0px",
                         }}
                     />
-                    <p className={classNames(styles.badge_text)}>LIVE</p>
+                    <p className={classNames(styles.badge_title)}>LIVE</p>
                 </div>
             ) : null}
               <CardMedia
