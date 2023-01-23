@@ -19,11 +19,11 @@ import Grid from '@mui/material/Grid';
 
 
 export default function Card({    
-    name = "Bla",
+    name = "",
     likes = 0,
-    mediaUrl = "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
+    mediaUrl = "",
     user = { 
-        avatar: { url: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" }, 
+        avatar: { url: "" }, 
         verified: false 
            },
     price = "",
