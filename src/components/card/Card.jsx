@@ -1,22 +1,20 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
+import Countdown from "react-countdown";
+import millify from "millify";
+
 import Avatar from "../avatar/Avatar.jsx";
 import styles from "./Card.module.scss";
 import classNames from "classnames";
-
 import { default as NFTCard } from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
  
 import Typography from "@mui/material/Typography";
- 
 import FavoriteIcon from "@mui/icons-material/Favorite";
-
 import Chip from "@mui/material/Chip"; 
-import millify from "millify";
-
 import Box from '@mui/material/Box'; 
 import Grid from '@mui/material/Grid';
-
+import CircleIcon from "@mui/icons-material/Circle";
 
 export default function Card({    
     name = "",

@@ -26,12 +26,9 @@ export default function Trending({ cards = []}) {
     <Container maxWidth="xl">
       <Box display="flex" justifyContent="space-between">
         <h1 className={classNames(styles.header)}>Trending</h1>
-        <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-          <InputLabel id="demo-select-small">This week</InputLabel>
-          <Select sx={{ width: "200px", borderRadius: "10px", }} >
-            <MenuItem value={1}>This week</MenuItem> 
-          </Select>
-        </FormControl>
+        <Select sx={{ width: "200px", borderRadius: "10px", }} >
+           <MenuItem value={1}>This week</MenuItem>
+        </Select>
       </Box>
 
     <Grid container spacing={2}>
