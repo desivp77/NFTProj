@@ -1,35 +1,26 @@
 import * as React from "react"; 
 import styles from "./Trending.module.scss";
 import classNames from "classnames";
-import Container from "@mui/material/Container";
-import InputLabel from '@mui/material/InputLabel';
+import Container from "@mui/material/Container"; 
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Select from '@mui/material/Select';
 import Box from '@mui/material/Box'; 
 import Grid from '@mui/material/Grid';
 import Card from "../card/Card.jsx";
  
-
-// export default function SelectSmall() {
-//   const [age, setAge] = React.useState('');
-
-//   const handleChange = (event: SelectChangeEvent) => {
-//     setAge(event.target.value);
-//   };
-// }
-
 export default function Trending({ cards = []}) {
 
   return (
     <div className={classNames(styles.trending_container)}>
     <Container maxWidth="xl">
-      <Box display="flex" justifyContent="space-between">
-        <h1 className={classNames(styles.header)}>Trending</h1>
-        <Select sx={{ width: "200px", borderRadius: "10px", }} >
-           <MenuItem value={1}>This week</MenuItem>
+    <Box display="flex" justifyContent="space-between">
+    <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+        <Select label="This week" >
+          <MenuItem value={10}>This week</MenuItem> 
         </Select>
-      </Box>
+      </FormControl>
+    </Box>
 
     <Grid container spacing={2}>
          {cards.map((card) => (
@@ -44,7 +35,7 @@ export default function Trending({ cards = []}) {
                  />
            </Grid>
                     ))}
-      </Grid>
+    </Grid>
     </Container>
     </div>
   );

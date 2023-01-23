@@ -16,6 +16,21 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import CircleIcon from "@mui/icons-material/Circle";
 
+const renderer = ({ hours, minutes, seconds, completed }) => {
+  if (completed) {
+      // Render a completed state
+      return <span>0:0:0</span>;
+  } else {
+      // Render a countdown
+      //return `${hours}:${minutes}:${seconds}`;
+      return (
+          <span>
+              {hours}:{minutes}:{seconds}
+          </span>
+      );
+  }
+};
+
 export default function Card({    
     name = "",
     likes = 0,
@@ -25,16 +40,33 @@ export default function Card({
         verified: false 
            },
     price = "",
-    currency = "" }) {
+    currency = "",
+    timeLeft = 0,
+   }) {
 
   const { millify } = require("millify");
+  const [time, setTime] = useState(timeLeft);
+
+  useEffect(() => {
+    if (timeLeft !== 0) {
+        const interval = setInterval(() => setTime(0), time);
+    }
+}, []);
 
   const handleClick = () => {
     console.info("You gave a like!");
   };
 
   return (
-    <NFTCard sx={{ maxWidth: 345 }} className={classNames(styles.card)}>
+    <NFTCard
+    className={classNames(styles.card)} 
+    sx={{
+      maxWidth: 345,
+      borderRadius: 0.5,
+      backgroundColor:
+          time === 0 ? "#181828" : "rgba(36, 242, 94, 0.1)",
+  }}
+  >
 
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>
@@ -47,6 +79,18 @@ export default function Card({
             </Grid>
 
             <Grid item xs={12}>
+            {time !== 0 ? (
+                <div className={classNames(styles.badge)}>
+                    <CircleIcon
+                        sx={{
+                            color: "#181828",
+                            width: "1vw",
+                            margin: "0 5px 0 0px",
+                        }}
+                    />
+                    <p className={classNames(styles.badge_text)}>LIVE</p>
+                </div>
+            ) : null}
               <CardMedia
               className={classNames(styles.media)}
               component="img"
@@ -54,6 +98,14 @@ export default function Card({
               image={mediaUrl}
               alt="NFT image"
               />
+            {time !== 0 ? (
+                <div className={classNames(styles.timer)}>
+                    <Countdown
+                        date={Date.now() + time}
+                        renderer={renderer}
+                    ></Countdown>
+                </div>
+            ) : null}
             </Grid>
 
             <Grid item xs={6}>

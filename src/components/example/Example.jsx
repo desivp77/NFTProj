@@ -20,7 +20,7 @@ export default function Copyright() {
           </Link>
         </Paper>
       </Container>
- 
+      <Card />
 <Trending />
     </div>
   );
