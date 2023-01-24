@@ -66,6 +66,83 @@ export default function Card({
   >
 
 
+        {/* <CardHeader
+                sx={{ paddingLeft: 0 }}
+                avatar={
+                  <Avatar 
+                  className={classNames(styles.media)}
+                  url={user.avatar.url} 
+                  verified={user.verified}/>
+   
+                }
+                title=""
+                subheader=""
+            />
+ 
+            {time !== 0 ? (
+                <div className={classNames(styles.badge)}>
+                    <CircleIcon
+                        sx={{
+                            color: "#181828",
+                            width: "1vw",
+                            margin: "0 5px 0 0px",
+                        }}
+                    />
+                    <p className={classNames(styles.badge_title)}>LIVE</p>
+                </div>
+            ) : null}
+            
+              <CardMedia
+              className={classNames(styles.media)}
+              component="img"
+              height="194"
+              image={mediaUrl}
+              alt="NFT image"
+              />
+            {time !== 0 ? (
+                <div className={classNames(styles.timer)}>
+                    <Countdown
+                        date={Date.now() + time}
+                        renderer={renderer}
+                    ></Countdown>
+                </div>
+            ) : null}
+ 
+
+                <CardContent>
+                <Box sx={{ flexGrow: 1 }}>
+              <Grid container spacing={3}>
+                <Grid item xs={6} justifyContent="flex-start">  
+                <Typography variant="body2" color="text.secondary">
+                <h5 className={classNames(styles.title)}>{name}</h5>
+                <p className={classNames(styles.price)}>{price} {currency}</p>
+                </Typography>
+                </Grid>
+
+                <Grid item xs={6} justifyContent="flex-end">
+                <Chip className={classNames(styles.likes)}
+                icon={<FavoriteIcon />}
+                label={millify(likes)}
+                onClick={handleClick}
+                variant="outlined"
+                color="primary"
+                sx={{
+                  padding: 0.5, 
+                  color: "#24f25e",
+                  border: "3px solid #24f25e",
+                  backgroundColor: "#232336",
+                  fontFamily: "Montserrat",
+                  fontStyle: "normal",
+                  fontWeight: 700,
+                  fontSize: "1rem",
+                  lineHeight: "1rem",
+              }}
+                />
+                </Grid>
+              </Grid>  
+         </Box>
+         </CardContent> */}
+
 <CardHeader
                 sx={{ paddingLeft: 0 }}
                 avatar={
@@ -117,8 +194,28 @@ export default function Card({
                         </Grid>
                         <Grid item xs={6} justifyContent="flex-end">
                             <div className={classNames(styles.likes)}>
+                                {/* <Button
+                                    sx={{
+                                        padding: 0.6,
+                                        width: 1,
+                                        color: "#24f25e",
+                                        border: "1px solid #24f25e",
+                                        backgroundColor:
+                                            "rgba(36, 242, 94, 0.1)",
+                                        fontFamily: "Montserrat",
+                                        fontStyle: "normal",
+                                        fontWeight: 700,
+                                        fontSize: "1rem",
+                                        lineHeight: "1rem",
+                                    }}
+                                    variant="outlined"
+                                    icon={<FavoriteIcon />}
+                                >
+                                    {millify(likes)}
+                                </Button> */}
 
-                                <Chip className={classNames(styles.likes)}
+
+                                <Button className={classNames(styles.likes)}
                                 icon={<FavoriteIcon />}
                                 label={millify(likes)}
                                 onClick={handleClick}
@@ -135,7 +232,7 @@ export default function Card({
                                   fontSize: "1rem",
                                   lineHeight: "1rem",
                               }}
-                          />
+                            />
                             </div>
                         </Grid>
                     </Grid>
