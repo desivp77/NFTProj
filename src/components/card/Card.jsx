@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import millify from "millify";
-import Countdown from './Countdown';
+import Countdown from "react-countdown";
+import millify from "millify"; 
 import Avatar from "../avatar/Avatar.jsx";
 import styles from "./Card.module.scss";
 import classNames from "classnames";
 import { default as NFTCard } from "@mui/material/Card";
-import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
  
@@ -65,17 +64,20 @@ export default function Card({
   }}
   >
 
-        <Box sx={{ flexGrow: 1 }}>
-          <Grid container spacing={2}>
 
-            <Grid item xs={12}>
-                <Avatar 
-                className={classNames(styles.media)}
-                url={user.avatar.url} 
-                verified={user.verified}/>
-            </Grid>
-
-            <Grid item xs={12}>
+        <CardHeader
+                sx={{ paddingLeft: 0 }}
+                avatar={
+                  <Avatar 
+                  className={classNames(styles.media)}
+                  url={user.avatar.url} 
+                  verified={user.verified}/>
+   
+                }
+                title=""
+                subheader=""
+            />
+ 
             {time !== 0 ? (
                 <div className={classNames(styles.badge)}>
                     <CircleIcon
@@ -88,6 +90,7 @@ export default function Card({
                     <p className={classNames(styles.badge_title)}>LIVE</p>
                 </div>
             ) : null}
+            
               <CardMedia
               className={classNames(styles.media)}
               component="img"
@@ -103,18 +106,19 @@ export default function Card({
                     ></Countdown>
                 </div>
             ) : null}
-            </Grid>
+ 
 
-            <Grid item xs={6}>
                 <CardContent>
+                <Box sx={{ flexGrow: 1 }}>
+              <Grid container spacing={3}>
+                <Grid item xs={6} justifyContent="flex-start">  
                 <Typography variant="body2" color="text.secondary">
                 <h5 className={classNames(styles.title)}>{name}</h5>
                 <p className={classNames(styles.price)}>{price} {currency}</p>
                 </Typography>
-                </CardContent>
-            </Grid>
+                </Grid>
 
-            <Grid item xs={6}>
+                <Grid item xs={6} justifyContent="flex-end">
                 <Chip className={classNames(styles.likes)}
                 icon={<FavoriteIcon />}
                 label={millify(likes)}
@@ -133,10 +137,10 @@ export default function Card({
                   lineHeight: "1rem",
               }}
                 />
-            </Grid>
-
-          </Grid>
+                </Grid>
+              </Grid>  
          </Box>
+         </CardContent>
         </NFTCard>
 
   );
