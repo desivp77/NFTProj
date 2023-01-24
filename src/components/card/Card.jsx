@@ -7,7 +7,7 @@ import classNames from "classnames";
 import { default as NFTCard } from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
- 
+import CardHeader from "@mui/material/CardHeader";
 import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import Chip from "@mui/material/Chip"; 
