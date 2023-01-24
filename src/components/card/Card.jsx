@@ -8,13 +8,11 @@ import { default as NFTCard } from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
-import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import Chip from "@mui/material/Chip"; 
 import Box from '@mui/material/Box'; 
 import Grid from '@mui/material/Grid';
 import CircleIcon from "@mui/icons-material/Circle";
-import Button from "@mui/material/Button";
 
 const renderer = ({ hours, minutes, seconds, completed }) => {
   if (completed) {
@@ -55,7 +53,7 @@ export default function Card({
   };
 
   return (
-    <NFTCard
+<NFTCard
     className={classNames(styles.card)} 
     sx={{
       maxWidth: 345,
@@ -66,19 +64,18 @@ export default function Card({
   >
 
 
-<CardHeader
-                sx={{ paddingLeft: 0 }}
-                avatar={
-                    <Avatar
-                        url={user.avatar.url}
-                        className={classNames(styles.media)}
-                        size={33}
-                        verified={user.verified}
-                    />
-                }
-                title=""
-                subheader=""
-            />
+    <CardHeader
+        sx={{ paddingLeft: 0 }}
+        avatar={
+        <Avatar
+            url={user.avatar.url}
+            className={classNames(styles.media)}
+            size={33}
+            verified={user.verified}
+        />}
+        title=""
+        subheader=""
+        />
             {time !== 0 ? (
                 <div className={classNames(styles.badge)}>
                     <CircleIcon
@@ -91,6 +88,7 @@ export default function Card({
                     <p className={classNames(styles.badge_title)}>LIVE</p>
                 </div>
             ) : null}
+
             <CardMedia
                 className={classNames(styles.media)}
                 component="img"
@@ -116,32 +114,31 @@ export default function Card({
                             </p>
                         </Grid>
                         <Grid item xs={6} justifyContent="flex-end">
-                            <div className={classNames(styles.likes)}>
-
-                                <Chip className={classNames(styles.likes)}
+                        <div className={classNames(styles.likes)}>
+                            <Chip 
                                 icon={<FavoriteIcon />}
                                 label={millify(likes)}
                                 onClick={handleClick}
                                 variant="outlined"
                                 color="primary"
                                 sx={{
-                                  padding: 0.5, 
-                                  color: "#24f25e",
-                                  border: "3px solid #24f25e",
-                                  backgroundColor: "#232336",
-                                  fontFamily: "Montserrat",
-                                  fontStyle: "normal",
-                                  fontWeight: 700,
-                                  fontSize: "1rem",
-                                  lineHeight: "1rem",
-                              }}
-                          />
-                            </div>
+                                padding: 0.5, 
+                                color: "#24f25e",
+                                border: "3px solid #24f25e",
+                                backgroundColor: "#232336",
+                                fontFamily: "Montserrat",
+                                fontStyle: "normal",
+                                fontWeight: 700,
+                                fontSize: "1rem",
+                                lineHeight: "1rem",
+                            }}
+                                />
+                        </div>
                         </Grid>
                     </Grid>
                 </Box>
             </CardContent>
-        </NFTCard>
+</NFTCard>
 
   );
 }

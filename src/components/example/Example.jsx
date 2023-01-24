@@ -7,6 +7,7 @@ import Card from "../card/Card.jsx";
 import Header from "../header/Header.jsx";
 
 import Trending from "../Trending/Trending.jsx";
+import Footer from "../footer/Footer";
 // import User from "../user/User.jsx";
 
 export default function Copyright() {
@@ -22,6 +23,7 @@ export default function Copyright() {
       </Container>
       <Card />
 <Trending />
+<Footer />
     </div>
   );
 }

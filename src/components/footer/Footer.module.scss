@@ -1,0 +1,27 @@
+@use "../../styles/colors";
+
+.wrapper {
+  padding: 0px;
+  background-color: colors.$background_default;
+}
+
+.container {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  background-color: colors.$background_default;
+}
+
+.paper {
+  max-width: 350px;
+  width: 100%;
+  font-size: 10rem;
+  position: relative;
+  top: 180px;
+  text-align: center;
+  background-color: colors.$background_default;
+}
+
+.policy_buttons {
+background-color: colors.$background_default;
+}
