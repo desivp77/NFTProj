@@ -1,5 +1,5 @@
 import * as React from "react"; 
-import styles from "./Auctions.module.scss";
+import styles from "./How.module.scss";
 import classNames from "classnames";
 import Container from "@mui/material/Container"; 
 import MenuItem from '@mui/material/MenuItem';
@@ -53,7 +53,7 @@ title:"String",
     </Box>
 
     <Grid container spacing={2}>
-         {cards.map((step) => (
+         {steps.map((step) => (
           <Grid item xs={3} key={step.description}>
               <Step
                  description={step.description}
