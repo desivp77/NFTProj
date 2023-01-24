@@ -2,20 +2,14 @@ import React, { useState, useEffect } from "react";
 import Countdown from "react-countdown";
 import millify from "millify"; 
 import Avatar from "../avatar/Avatar.jsx";
-import styles from "./Card.module.scss";
+import styles from "./Step.module.scss";
 import classNames from "classnames";
-import { default as NFTCard } from "@mui/material/Card";
-import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
-import CardHeader from "@mui/material/CardHeader";
-import Typography from "@mui/material/Typography";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import Chip from "@mui/material/Chip"; 
-import Box from '@mui/material/Box'; 
 import Grid from '@mui/material/Grid';
-import CircleIcon from "@mui/icons-material/Circle";
 import Button from "@mui/material/Button";
-
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
 // You must create a Step component (in the src/components/how folder) that represents an info card and must receive the following props:
 // {
 //  "number":"Number",
@@ -30,97 +24,87 @@ export default function Step({
    }) {
 
 
-  const handleClick = () => {
-    console.info("You gave a like!");
-  };
+  
 
   return (
-    <NFTCard
-    className={classNames(styles.card)} 
-    sx={{
-      maxWidth: 345,
-      borderRadius: 0.5,
-      backgroundColor:
-          time === 0 ? "#181828" : "rgba(36, 242, 94, 0.1)",
-  }}
-  >
+    <Card sx={{ display: "flex", boxShadow: "none" }}>
+    <Box
+      sx={{
+        flex: "6 0 auto",
+        display: "flex",
+        flexDirection: "column",
+        width: "30%",
+        borderRadius: "30px 0px 0px 30px",
+        backgroundColor: "#4E24F2"
+      }}
+    >
+      <CardContent>
+        <Typography
+          component="div"
+          variant="h5"
+          sx={{
+            padding: "40px",
+            textAlign: "center",
+            color: "#fff",
+            fontFamily: "Montserrat",
+            fontStyle: "normal",
+            fontWeight: 700,
+            fontSize: "3rem",
+            lineHeight: "3rem"
+          }}
+        >
+          1
+        </Typography>
+      </CardContent>
+    </Box>
 
-<CardHeader
-                sx={{ paddingLeft: 0 }}
-                avatar={
-                    <Avatar
-                        url={user.avatar.url}
-                        className={classNames(styles.media)}
-                        size={33}
-                        verified={user.verified}
-                    />
-                }
-                title=""
-                subheader=""
-            />
-            {time !== 0 ? (
-                <div className={classNames(styles.badge)}>
-                    <CircleIcon
-                        sx={{
-                            color: "#181828",
-                            width: "1vw",
-                            margin: "0 5px 0 0px",
-                        }}
-                    />
-                    <p className={classNames(styles.badge_title)}>LIVE</p>
-                </div>
-            ) : null}
-            <CardMedia
-                className={classNames(styles.media)}
-                component="img"
-                height="286"
-                image={mediaUrl}
-                alt="NFT image"
-            />
-            {time !== 0 ? (
-                <div className={classNames(styles.timer)}>
-                    <Countdown
-                        date={Date.now() + time}
-                        renderer={renderer}
-                    ></Countdown>
-                </div>
-            ) : null}
-            <CardContent>
-                <Box sx={{ flexGrow: 1 }}>
-                    <Grid container spacing={3}>
-                        <Grid item xs={6} justifyContent="flex-start">
-                            <h5 className={classNames(styles.title)}>{name}</h5>
-                            <p className={classNames(styles.price)}>
-                                {price} {currency}
-                            </p>
-                        </Grid>
-                        <Grid item xs={6} justifyContent="flex-end">
-                            <div className={classNames(styles.likes)}>
-
-                                <Button className={classNames(styles.likes)}
-                                icon={<FavoriteIcon />}
-                                label={millify(likes)}
-                                onClick={handleClick}
-                                variant="outlined"
-                                color="primary"
-                                sx={{
-                                  padding: 0.5, 
-                                  color: "#24f25e",
-                                  border: "3px solid #24f25e",
-                                  backgroundColor: "#232336",
-                                  fontFamily: "Montserrat",
-                                  fontStyle: "normal",
-                                  fontWeight: 700,
-                                  fontSize: "1rem",
-                                  lineHeight: "1rem",
-                              }}
-                            />
-                            </div>
-                        </Grid>
-                    </Grid>
-                </Box>
-            </CardContent>
-        </NFTCard>
+    <CardContent
+      sx={{
+        flex: "12 0 auto",
+        backgroundColor: "#181828",
+        flex: "6 0 auto",
+        display: "flex",
+        flexDirection: "column",
+        width: "60%",
+        borderRadius: "0px 30px 30px 0px "
+      }}
+    >
+      <Typography
+        component="div"
+        variant="h5"
+        sx={{
+          padding: "20px 0 0 20px",
+          textAlign: "left",
+          color: "#fff",
+          fontFamily: "Montserrat",
+          fontStyle: "normal",
+          fontWeight: 700,
+          fontSize: "1.3rem",
+          lineHeight: "1.3rem"
+        }}
+      >
+        Live From Space
+      </Typography>
+      <Typography
+        variant="subtitle1"
+        color="text.secondary"
+        component="div"
+        sx={{
+          padding: "20px",
+          textAlign: "left",
+          color: "#fff",
+          fontFamily: "Montserrat",
+          fontStyle: "normal",
+          fontWeight: 500,
+          fontSize: "0.8rem",
+          lineHeight: "1rem"
+        }}
+      >
+        Mac Miller Live From SpaceLive From SpaceLive From SpaceLive From
+        SpaceLive From SpaceLive From SpaceLive From SpaceLive From Space
+      </Typography>
+    </CardContent>
+  </Card>
 
   );
 }
