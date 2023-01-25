@@ -13,6 +13,8 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import CircleIcon from "@mui/icons-material/Circle";
 import Avatar from "../avatar/Avatar";
+import Chip from "@mui/material/Chip"; 
+
 
 const renderer = ({ hours, minutes, seconds, completed }) => {
     if (completed) {
@@ -30,7 +32,9 @@ export default function Card({
     name = "",
     likes = 0,
     mediaUrl = "",
-    user = { avatarUrl: "", verified: false },
+    user = { 
+        avatarUrl: "", 
+        verified: false },
     price = "",
     currency = "",
     timeLeft = 0,
@@ -103,25 +107,23 @@ export default function Card({
                         </Grid>
                         <Grid item xs={6} justifyContent="flex-end">
                             <div className={classNames(styles.likes)}>
-                                <Button
-                                    sx={{
-                                        padding: 0.6,
-                                        width: 1,
-                                        color: "#24f25e",
-                                        border: "1px solid #24f25e",
-                                        backgroundColor:
-                                            "rgba(36, 242, 94, 0.1)",
-                                        fontFamily: "Montserrat",
-                                        fontStyle: "normal",
-                                        fontWeight: 700,
-                                        fontSize: "1rem",
-                                        lineHeight: "1rem",
-                                    }}
-                                    variant="outlined"
+                                <Chip className={classNames(styles.likes)}
                                     startIcon={<Favorite />}
-                                >
-                                    {millify(likes)}
-                                </Button>
+                                    label={millify(likes)} 
+                                    variant="outlined"
+                                    color="primary"
+                                    sx={{
+                                    padding: 0.5, 
+                                    color: "#24f25e",
+                                    border: "3px solid #24f25e",
+                                    backgroundColor: "#232336",
+                                    fontFamily: "Montserrat",
+                                    fontStyle: "normal",
+                                    fontWeight: 700,
+                                    fontSize: "1rem",
+                                    lineHeight: "1rem",
+                                }}
+                                    />
                             </div>
                         </Grid>
                     </Grid>

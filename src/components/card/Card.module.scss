@@ -83,14 +83,14 @@
 
 .badge {
   position: absolute;
-  top: 20%;
-  left: 9%;
+  margin: -15vw 0 0 15px;
   display: flex;
   align-items: center;
   background-color: colors.$secondary_main;
   border-radius: 7px;
   padding: 3px;
   width: 4vw;
+  height: 30px;
 }
 
 .badge_title {
@@ -107,8 +107,8 @@
 
 .timer {
   position: absolute;
-  left: 4.9%;
-  bottom: 18%;
+  left: 6.3%;
+  bottom: 7%;
   padding: 10px;
   font-family: "Montserrat";
   font-style: normal;
@@ -119,5 +119,5 @@
   text-align: center;
   border-radius: 0 0 15px 15px;
   background-color: colors.$secondary_main;
-  width: 90.5%;
+  width: 15%;
 }

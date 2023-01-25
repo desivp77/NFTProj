@@ -40,7 +40,7 @@ export default function Auctions({ cards = []}) {
     <Box display="flex" justifyContent="space-between">
     <h1 className={classNames(styles.header)}> 🔥 Live Auctions </h1>
     <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-        <Select label="This week" >
+        <Select label="This week"  >
           <MenuItem value={10}>This week</MenuItem> 
         </Select>
       </FormControl>
