@@ -13,8 +13,8 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import CircleIcon from "@mui/icons-material/Circle";
 import Avatar from "../avatar/Avatar";
-import Chip from "@mui/material/Chip"; 
-
+import Chip from "@mui/material/Chip";  
+import Container from '@mui/material/Container';
 
 const renderer = ({ hours, minutes, seconds, completed }) => {
     if (completed) {
@@ -49,8 +49,7 @@ export default function Card({
 
     return (
         <MuiCard  
-            className={classNames(styles.badge, styles.card)}
- 
+            className={classNames(styles.card)}
             sx={{
                 maxWidth: 325,
                 borderRadius: 0.5,
@@ -71,16 +70,19 @@ export default function Card({
                 subheader=""
             />
             {time !== 0 ? (
-                <div>
+
+                    <Container fixed className={classNames(styles.badge)}>
+                    <Box sx={{ width: '50px', height: '30px' }} />
                     <CircleIcon
                         sx={{
                             color: "#181828",
                             width: "1vw",
                             margin: "0 5px 0 0px",
+                            borderRadius: "5px"
                         }}
                     />
                     <p className={classNames(styles.badge_text)}>LIVE</p>
-                </div>
+                    </Container>
             ) : null}
             <CardMedia
                 className={classNames(styles.media)}
