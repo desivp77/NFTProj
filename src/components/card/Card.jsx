@@ -48,8 +48,9 @@ export default function Card({
     }, []);
 
     return (
-        <MuiCard
-            className={classNames(styles.card)}
+        <MuiCard  
+            className={classNames(styles.badge, styles.card)}
+ 
             sx={{
                 maxWidth: 325,
                 borderRadius: 0.5,
@@ -70,7 +71,7 @@ export default function Card({
                 subheader=""
             />
             {time !== 0 ? (
-                <div className={classNames(styles.badge)}>
+                <div>
                     <CircleIcon
                         sx={{
                             color: "#181828",
