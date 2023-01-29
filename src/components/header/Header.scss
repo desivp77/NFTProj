@@ -1,0 +1,38 @@
+@use "../styles/colors";
+
+.wrapper {
+  padding: 0px;
+  background-color: colors.$background_default;
+}
+
+.container {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.paper {
+  max-width: 350px;
+  width: 100%;
+  font-size: 10rem;
+  position: relative;
+  top: 180px;
+  text-align: center;
+}
+
+.default {
+  background-image: url('../../public/images/logo.svg');
+}
+
+.muted {
+  background-image: url('../../public/images/logo-muted.svg');
+}
+
+.css-1urufiw {
+  position: relative;
+  border-radius: 51px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin-right: 24px;
+  margin-left: 0;
+  width: 100%;
+}
