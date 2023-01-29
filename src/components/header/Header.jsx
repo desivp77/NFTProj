@@ -5,14 +5,14 @@ import { styled } from "@mui/material/styles";
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import Logo from "./Logo.jsx";
-import MenuButtons from "./MenuButtons.jsx";
-import SearchBar from "./SearchBar.jsx";
+import Logo from "../logo/Logo.jsx";
+import MenuButtons from "../MenuButtons.jsx";
+import SearchBar from "../SearchBar.jsx";
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Container from "@mui/material/Container";
 import classNames from "classnames"; 
-import styles from "../components/example/Example.module.scss";
+import styles from "./Header.module.scss";
 
 // import styles from "./Header.scss";
 

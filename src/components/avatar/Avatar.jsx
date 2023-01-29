@@ -1,37 +1,33 @@
-import Paper from "@mui/material/Paper";
-import Link from "../link/Link";
+import * as React from "react";
 import styles from "./Avatar.module.scss";
-import classNames from "classnames"; 
 import { styled } from "@mui/material/styles";
-import Badge from "@mui/material/Badge";
-import Avatar from "@mui/material/Avatar";
 
-const SmallAvatar = styled(Avatar)(({ theme }) => ({
-  width: 28,
-  height: 28,
-  marginLeft: '8px'
-}));
 
-const verified = "false";
-// <MyComponent prop={verified} />
+export default function Avatar({ url, size = 90, sizeIcon = 28, verified = false }) {
+ 
 
-export default function Avatar1() {
   return (
-    <div className='avatar'>
-      <Badge className='badge'
-        prop={verified}
-        overlap="circular"
-        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-        badgeContent={
-          <SmallAvatar alt="Badge" src="/images/verified.svg" />
-        }
-      >
-        <Avatar className='image'
-          alt="Avatar Pic"
-          src="/images/avatar.png"
-          sx={{ width: 90, height: 90 }}
-        />
-      </Badge>
-    </div>
+      <div className="avatar" width={size} height={size}>
+
+            <img
+                alt="avatar"
+                // src={url}
+                src="/images/avatar.png"
+                style={{width: 45, height: 45, borderRadius: 400/ 2}} 
+                
+                width={size}
+                height={size}
+                className="image"
+            />
+            <img
+                alt="verified icon"
+                src="/images/verified.svg"
+                width={sizeIcon / 2}
+                height={sizeIcon  / 2}
+                className="badge"
+            />
+        </div>
+ 
   );
 }
+ 

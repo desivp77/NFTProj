@@ -9,6 +9,7 @@
   display: flex !important;
   align-items: center;
   justify-content: center;
+  background-color: colors.$background_default;
 }
 
 .paper {
@@ -18,16 +19,9 @@
   position: relative;
   top: 180px;
   text-align: center;
+  background-color: colors.$background_default;
 }
 
-.avatar {
-  color: blue;
-}
-
-.avatar .image{
-  color: blue;
-}
-
-.avatar .badge{
-  color: blue;
+.policy_buttons {
+background-color: colors.$background_default;
 }
